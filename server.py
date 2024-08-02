@@ -12,7 +12,7 @@ from starlette.responses import JSONResponse
 
 from coinsecd.CoinsecdMultiClient import CoinsecdMultiClient
 
-sio = socketio.AsyncServer(async_mode="asgi", cors_allowed_origins=['*'], transports=['polling', 'websocket'])
+sio = socketio.AsyncServer(async_mode="asgi", cors_allowed_origins=[])
 socket_app = socketio.ASGIApp(sio)
 
 app = FastAPI(
